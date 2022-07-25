@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.js"></script>
 
+    <script src="js/script.js"></script>
+
 </head>
 
 <body>
@@ -21,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <div class="navbar-nav">
                     <a class="nav-link <?php if ($uri['path'][0] == 'home' || $uri['path'][0] == '') echo 'active'; ?>" href="/home">Projektlista</a>
-                    <a class="nav-link <?php if ($uri['path'][0] == 'create_edit') echo 'active'; ?>" href="create_edit">Szerkeztés/Felvétel</a>
+                    <a class="nav-link <?php if ($uri['path'][0] == 'create_edit') echo 'active'; ?>" href="create_edit">Szerkesztés/Létrehozás</a>
                 </div>
             </div>
         </div>

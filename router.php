@@ -1,5 +1,4 @@
 <?php
-
 switch ($uri['path'][0]) {
     case "":
         include(__DIR__ . "/pages/home.php");
