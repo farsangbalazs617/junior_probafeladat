@@ -1,5 +1,7 @@
 <?php
 
+//Ezt a fájlt hívja meg aszinkron módon a javascript a törléshez
+
 require_once("DB.php");
 
 $db = new DB();

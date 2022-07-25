@@ -30,8 +30,10 @@ $statuses = $db->handler->query("
 ", PDO::FETCH_ASSOC);
 
 
+//Ha az oldalon a mentés történik ez alapján vizsgáljuk
 if (isset($_POST) && !empty($_POST) && $_POST['project_owner'] !== '') {
 
+    //A projekt kapcsolattartójának vizsgálata ha létezik akkor csak módosítjuk a kapcsolatot ha nem akkor felveszünk egy új személyt
     $projectOwner = $db->handler->prepare("
             SELECT * from owners
             WHERE email = :email
@@ -101,7 +103,6 @@ if (isset($_POST) && !empty($_POST) && $_POST['project_owner'] !== '') {
 ?>
 
 <div class="container">
-
     <?php if (isset($success_save)) : ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             Sikeres mentés!
@@ -138,5 +139,4 @@ if (isset($_POST) && !empty($_POST) && $_POST['project_owner'] !== '') {
         <input type="hidden" value="<?php echo $project['id'] ?? '' ?>" name="project_id">
         <button type="submit" class="btn btn-primary">Mentés</button>
     </form>
-
 </div>

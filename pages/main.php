@@ -16,14 +16,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/home">WeLove</a>
+            <a class="navbar-brand" href="/home">WeLove Test</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar">
                 <div class="navbar-nav">
-                    <a class="nav-link <?php if ($uri['path'][0] == 'home' || $uri['path'][0] == '') echo 'active'; ?>" href="/home">Projektlista</a>
-                    <a class="nav-link <?php if ($uri['path'][0] == 'create_edit') echo 'active'; ?>" href="create_edit">Szerkesztés/Létrehozás</a>
+                    <a class="nav-link <?php if ($uri['path'] == 'home' || $uri['path'] == '') echo 'active'; ?>" href="/home">Projektlista</a>
+                    <a class="nav-link <?php if ($uri['path'] == 'create_edit') echo 'active'; ?>" href="create_edit">Szerkesztés/Létrehozás</a>
                 </div>
             </div>
         </div>

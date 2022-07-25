@@ -3,6 +3,7 @@
 class DB
 {
     
+    //ADATBÁZIS kapcsolathoz az adatok
     private $provider = "mysql";
     private $host = "localhost";
     private $user = "root";
@@ -18,12 +19,6 @@ class DB
         } catch (PDOException $e) {
             die("Hiba a kapcsolódásnál: " . $e->getMessage());
         }
-    }
-
-    
-    public function close()
-    {
-
     }
 
 }
