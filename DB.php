@@ -11,7 +11,7 @@ class DB
 
     public $handler = null;
 
-    public function connect()
+    public function __construct()
     {
         try {
             $this->handler = new PDO($this->provider.':host='.$this->host.';dbname='.$this->dbname, $this->user, $this->password);
@@ -21,7 +21,6 @@ class DB
     }
 
     
-
     public function close()
     {
 
